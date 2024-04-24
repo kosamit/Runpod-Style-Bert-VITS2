@@ -7,11 +7,17 @@
 これでビルドする。
 
 ```
-sudo docker build --progress=plain . -f Dockerfile -t <USERNAME>/runpod-style-bert-vits2-api:1.0.0
+docker build --progress=plain . -f Dockerfile -t <USERNAME>/runpod-style-bert-vits2-api:1.0.0
+```
+
+Docker Hubにログイン。
+
+```
+docker login
 ```
 
 Docker Hubにプッシュする。
 
 ```
-sudo docker push <USERNAME>/runpod-style-bert-vits2-api:1.0.0
+docker push <USERNAME>/runpod-style-bert-vits2-api:1.0.0
 ```
