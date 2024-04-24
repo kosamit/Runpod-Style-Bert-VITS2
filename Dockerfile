@@ -26,7 +26,7 @@ RUN pip3 install runpod
 ENV LD_LIBRARY_PATH /opt/conda/lib/python3.10/site-packages/nvidia/cublas/lib:/opt/conda/lib/python3.10/site-packages/nvidia/cudnn/lib:${LD_LIBRARY_PATH}
 RUN python initialize.py --skip_jvnv
 
-
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" /dev/null
 RUN git clone https://github.com/kosamit/Runpod-Style-Bert-VITS2.git
 
 RUN mv Runpod-Style-Bert-VITS2/start.sh .
