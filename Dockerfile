@@ -12,6 +12,14 @@ RUN mv Style-Bert-VITS2 /app
 WORKDIR /app/model_assets
 RUN git clone https://huggingface.co/ayousanz/tsukuyomi-chan-style-bert-vits2-model
 
+RUN /app/model_assets/tsukuyomi-chan-style-bert-vits2-model
+# RUN rm tsukuyomi-chan_e39_s1000.safetensors
+# RUN rm tsukuyomi-chan_e77_s2000.safetensors
+RUN rm tsukuyomi-chan_e116_s3000.safetensors
+# RUN rm tsukuyomi-chan_e154_s4000.safetensors
+# RUN rm tsukuyomi-chan_e193_s5000.safetensors
+# RUN rm tsukuyomi-chan_e200_s5200.safetensors
+
 WORKDIR /app
 RUN pip3 install -r requirements.txt
 RUN pip3 install runpod
