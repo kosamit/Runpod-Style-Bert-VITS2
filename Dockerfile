@@ -23,8 +23,9 @@ RUN rm tsukuyomi-chan_e200_s5200.safetensors
 WORKDIR /app
 RUN pip3 install -r requirements.txt
 RUN pip3 install runpod
-
 ENV LD_LIBRARY_PATH /opt/conda/lib/python3.10/site-packages/nvidia/cublas/lib:/opt/conda/lib/python3.10/site-packages/nvidia/cudnn/lib:${LD_LIBRARY_PATH}
+RUN python initialize.py --skip_jvnv
+
 
 RUN git clone https://github.com/kosamit/Runpod-Style-Bert-VITS2.git
 
